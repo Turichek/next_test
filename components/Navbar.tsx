@@ -1,7 +1,7 @@
 import { List, ListItem } from '@mui/material';
+import { red } from '@mui/material/colors';
 import Link from 'next/link';
 import { FC } from 'react';
-
 
 const Navbar: FC = () => {
     const navigation = [
@@ -10,17 +10,17 @@ const Navbar: FC = () => {
     ]
 
     return (
-        <List sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <List sx={{ display: 'flex', justifyContent: 'flex-end', backgroundColor: red[100], p: 0 }}>
             {
                 navigation.map((item) =>
-                    <ListItem sx={{width: 0.08, dispaly: 'flex', justifyContent: 'center'}} key={item.id}>
-                        <Link href={item.path}>
+                    <Link key={item.id} href={item.path}>
+                        <ListItem sx={{ width: 0.08, p: 2, display: 'flex', justifyContent: 'center', ':hover': { backgroundColor: red[200] } }}>
                             <a>{item.title}</a>
-                        </Link>
-                    </ListItem>
+                        </ListItem>
+                    </Link>
                 )
             }
-        </List>
+        </List >
     )
 }
 
