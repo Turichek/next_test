@@ -1,11 +1,9 @@
-import { Typography, Paper, Grid, Box } from '@mui/material';
+import { Grid } from '@mui/material';
 import Layout from '../components/Layout';
 import { FC } from 'react';
 import { GetStaticProps } from 'next';
 import { ChangeDataToArr } from '../components/helpers/toData';
 import { AnimeType } from '../types';
-import Image from 'next/image';
-import Link from 'next/link';
 import Card from '../components/Card';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -20,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 type animesTypeProps = {
-  animes: [AnimeType],
+  animes: AnimeType[],
 }
 
 const Home: FC<animesTypeProps> = ({ animes }) => {
@@ -30,7 +28,7 @@ const Home: FC<animesTypeProps> = ({ animes }) => {
         <Grid container justifyContent='space-between' columns={{ xl: 13 }}>
           {
             animes && animes.map(item =>
-              <Card item={item} />
+              <Card key={item.id} item={item} />
             )
           }
         </Grid>

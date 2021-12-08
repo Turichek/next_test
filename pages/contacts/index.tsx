@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import { FC } from 'react';
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 
 const Contacts:FC = () => {
   return (

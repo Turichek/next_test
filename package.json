@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@emotion/react": "^11.7.0",
@@ -17,14 +18,20 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/react": "^17.0.37",
-    "eslint": "8.4.0",
-    "eslint-config-next": "12.0.7",
-    "jest": "^27.4.3",
+    "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "@types/react": "^17.0.37",
+    "babel-jest": "^27.4.2",
+    "eslint": "8.4.0",
+    "eslint-config-next": "12.0.7",
+    "jest": "^27.4.3",
     "react-test-renderer": "^17.0.2",
+    "ts-jest": "^27.1.0",
+    "ts-node": "^10.4.0",
     "typescript": "^4.5.2"
   }
 }
